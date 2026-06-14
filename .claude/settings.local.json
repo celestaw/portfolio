@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"$env:LOCALAPPDATA\\\\nvm\\\\nvm.exe\" list 2>&1)"
+    ]
+  }
+}
