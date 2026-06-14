@@ -1,7 +1,5 @@
 # 渡邉 拓真 — Portfolio (Next.js)
 
-teamLab サマーインターン提出用ポートフォリオサイト。
-
 ## 起動
 
 ```bash
@@ -9,7 +7,7 @@ npm install
 npm run dev
 ```
 
-http://localhost:3000 で表示される。
+ローカル実装時はhttp://localhost:3000 で表示される。
 
 ## 本番ビルド
 
