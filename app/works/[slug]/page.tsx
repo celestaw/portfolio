@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return projects.filter((p) => p.featured).map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const p = getProject(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const p = getProject(slug);
   return { title: p ? `${p.title} — 渡邉 拓真` : "Not Found" };
 }
 
@@ -34,8 +35,9 @@ function Section({
   );
 }
 
-export default function WorkPage({ params }: { params: { slug: string } }) {
-  const p = getProject(params.slug);
+export default async function WorkPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const p = getProject(slug);
   if (!p || !p.featured) notFound();
 
   return (
