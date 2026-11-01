@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projects, getProject } from "@/data/projects";
+import { profile } from "@/data/profile";
 
 export function generateStaticParams() {
   return projects.filter((p) => p.featured).map((p) => ({ slug: p.slug }));
@@ -10,7 +11,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const p = getProject(slug);
-  return { title: p ? `${p.title} — 渡邉 拓真` : "Not Found" };
+  return { title: p ? `${p.title} — ${profile.name}` : "Not Found" };
 }
 
 function Section({

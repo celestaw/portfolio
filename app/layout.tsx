@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { profile } from "@/data/profile";
 import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
@@ -14,8 +15,8 @@ const jp = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "渡邉 拓真 — Portfolio",
-  description: "渡邉拓真（東京科学大学 修士1年, HCI）の制作実績ポートフォリオ",
+  title: `${profile.name} — Portfolio`,
+  description: `${profile.name}（東京科学大学 修士1年, HCI）の制作実績ポートフォリオ`,
 };
 
 export default function RootLayout({

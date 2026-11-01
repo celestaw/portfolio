@@ -22,10 +22,7 @@ export default function Home() {
           Portfolio
         </p>
         <h1 className="text-3xl font-bold text-slate-900">
-          {profile.nameJa}
-          <span className="ml-3 text-lg font-normal text-slate-500">
-            {profile.nameEn}
-          </span>
+          {profile.name}
         </h1>
         <p className="mt-3 text-sm text-slate-600">
           {profile.affiliation}
@@ -140,7 +137,7 @@ export default function Home() {
       </div>
 
       <footer className="mt-20 border-t border-slate-200 pt-6 text-xs text-slate-400">
-        © {new Date().getFullYear()} {profile.nameJa} ({profile.nameEn})
+        © {new Date().getFullYear()} {profile.name}
       </footer>
     </main>
   );
