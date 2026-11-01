@@ -237,6 +237,34 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    slug: "xi-archive",
+    title: "xi archive",
+    tagline: "作品の公開記録と出典をたどる、作曲家xiの非公式アーカイブ",
+    period: "2026/10 –",
+    role: "個人制作（AI活用）",
+    category: "tool",
+    stack: ["Next.js", "TypeScript", "FastAPI", "Python"],
+    featured: true,
+    overview: [
+      "音楽ゲーム作曲家xiの作品・収録先・公開記録を照合し、作品の前後関係を年表でたどれる非公式アーカイブ。現在の台帳には253作品を収録している。",
+      "検索・収録先別の閲覧に加え、曲名の個別コピー、全曲一覧のコピー、CSV出力に対応する。日付未確認の曲も検索結果から参照できる。",
+    ],
+    system: [
+      "Next.jsとTypeScriptで画面、FastAPIとPythonでAPI・調査データの整理を実装。公開APIは明示的に許可した項目だけを書き出す。",
+      "動画公開、ゲーム収録、アルバム発売を別のイベントとして保持し、一次・二次資料と日付精度を区別する。音源リンクも投稿元と作品版を分けて記録する。",
+    ],
+    limits: [
+      "xi本人・各権利者とは関係のない個人制作の非公式サイト。",
+      "掲載日は確認できた公開記録であり、作曲日や真の初公開日を保証しない。日付・帰属未確認の候補と別バージョンを含む。",
+      "音源の掲載情報と実際の再生確認は区別しており、全リンクの再生・地域制限を確認したものではない。",
+    ],
+    links: [
+      { label: "xi archive を開く", href: "https://xi-archive.vercel.app" },
+      { label: "リポジトリ (GitHub)", href: "https://github.com/celestaw/xi_archive_by_taw/tree/main" },
+    ],
+  },
+
   // ============================================================
   // 以下、一覧にのみ掲載（詳細本文なし＝ featured: false）
   // 必要になったら featured: true にして本文を足す
