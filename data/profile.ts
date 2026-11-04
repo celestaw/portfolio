@@ -57,6 +57,7 @@ export const profile = {
     { date: "卒業研究", text: "パズルゲーム Taiji の NP完全性を証明（Circuit SAT 帰着）" },
     { date: "2026/03", text: "明治大学 理工学部 情報科学科 卒業" },
     { date: "2026/04", text: "東京科学大学 情報理工学院 情報理工学系 情報工学コース（博士課程前期）入学。専攻を HCI へ変更" },
+    { date: "2026/08〜09", text: "NTT R&D インターンシップに参加。公開テーマ：「4D Gaussian Splattingを用いた自由視点映像の学習・配信アーキテクチャの検討」" },
     { date: "現在", text: "宮藤研究室にて回転 LED 空中立体ディスプレイを研究" },
   ],
   certifications: ["基本情報技術者", "普通自動車第一種運転免許（AT 限定）"],
